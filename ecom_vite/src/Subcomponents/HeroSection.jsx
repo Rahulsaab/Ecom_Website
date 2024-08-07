@@ -7,7 +7,7 @@ const HeroSection = ({mydata}) => {
     <>
       <section>
        
-          <div className="hero-sec ">
+          <div className="hero-sec pb-10 ">
             <div className="hero-left">
               <div className="text-gray-500">WELCOME TO</div>
               <div className="text-2xl font-bold ">{name}</div>

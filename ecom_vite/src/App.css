@@ -447,6 +447,17 @@ textarea {
   padding-bottom: 4rem;
 }
 
+/* FEATURE PRODUCTS */
+.container-fp{
+  height: fit-content;
+  background-color: #D1C2FF;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem;
+  
+
+  
+}
 
 }
 
@@ -785,8 +796,11 @@ textarea {
 
 /* FEATURE PRODUCTS */
 .container-fp{
-  height: 60dvh;
+  height: fit-content;
   background-color: #D1C2FF;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem;
   
 }
 
