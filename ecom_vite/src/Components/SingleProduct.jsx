@@ -45,10 +45,13 @@ const SingleProduct = () => {
   if (isSingleLoading) {
     return (
       <div className="mt-64">
-        <div className="loader m-auto max-w-fit ">
-          <span className="loader-text">loading</span>
-          <span className="load"></span>
-        </div>
+        <section class="dots-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </section>
       </div>
     );
   }
@@ -121,7 +124,7 @@ const SingleProduct = () => {
                 </div>
               </div>
               <div className="">
-                {stock>0 && <Addtocart product={singleProduct}/>}
+                {stock > 0 && <Addtocart product={singleProduct} />}
               </div>
 
               {/* <div className="flex gap-2 pt-3">

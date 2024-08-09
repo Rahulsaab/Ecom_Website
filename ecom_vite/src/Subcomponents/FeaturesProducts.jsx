@@ -7,10 +7,13 @@ const FeaturesProducts = () => {
 
   if (isLoading) {
     return (
-      <div className="loader m-auto max-w-fit">
-        <span className="loader-text">loading</span>
-        <span className="load"></span>
-      </div>
+      <section class="dots-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </section>
     );
   }
 
