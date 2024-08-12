@@ -12,35 +12,37 @@ const MyImages = ({ imgs = [{ url: "" }] }) => {
           setMainImage(imgs[nextIndex]);
           return nextIndex;
         });
-      }, 4000); 
+      }, 4000);
 
-      return () => clearInterval(intervalId); 
+      return () => clearInterval(intervalId);
     }
   }, [imgs]);
 
   return (
-    <div className="flex flex-row gap-7 align-middle justify-center">
-      <div className="w-44">
-        {imgs.length > 0 ? (
-          imgs.map((item, index) => (
-            <div className="pb-3" key={index}>
+    <div className="flex flex-row gap-4 align-middle justify-center md:p-7 ">
+      <div className="grid gap-4">
+        <div>
+          <img
+            className="h-auto max-w-full rounded-lg"
+            src={mainImage.url}
+            alt={mainImage.filename}
+          />
+        </div>
+        <div className="grid grid-cols-5 gap-4 justify-center ">
+          {imgs.slice(1).map((item, index) => (
+            <div key={index}>
               <img
+                className="h-auto max-w-full rounded-lg cursor-pointer"
                 src={item.url}
                 alt={item.filename}
                 onClick={() => {
                   setMainImage(item);
-                  setCurrentIndex(index);
+                  setCurrentIndex(index + 1);
                 }}
-                className="rounded-xl cursor-pointer"
               />
             </div>
-          ))
-        ) : (
-          <p>No images available</p>
-        )}
-      </div>
-      <div className="w-80 pt-28">
-        <img src={mainImage.url} alt={mainImage.filename} className="rounded-2xl " />
+          ))}
+        </div>
       </div>
     </div>
   );

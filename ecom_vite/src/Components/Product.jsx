@@ -9,7 +9,7 @@ const Product = ({ item }) => {
   return (
     <Link to={`/singleproduct/${id}`}>
 
-      <Card className="max-w-sm mb-5 p-3 rounded-xl "  imgAlt={name} imgSrc={image}>
+      <Card className="max-w-sm mb-5 p-3 rounded-xl"  imgAlt={name} imgSrc={image}>
         <a href="#">
           <h5 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {name}

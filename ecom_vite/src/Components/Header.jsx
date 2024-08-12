@@ -10,7 +10,7 @@ import { FaBoxOpen } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
 import { FaPen } from "react-icons/fa";
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-50 fixed top-0 w-full z-50 py-1">
       <div className="container mx-auto px-7 py-4 flex justify-between items-center">
-        <div className="flex items-center pl-3">
+        <div className="flex items-center ">
           <img src="/vite.svg" alt="Logo" className="h-10 w-10" />
           <span className="ml-3 text-xl font-bold text-gray-800">
             Ecom Website
@@ -94,12 +94,6 @@ const Navbar = () => {
               <span className="quantity" />
             </button></Link>
           </div>
-          {/* <div className="relative px-5">
-            <Link to="/cart" className="text-gray-800 text-2xl hover:glow-blue">
-              <FaCartArrowDown />
-              <span className="absolute  rounded-full text-xs w-5 h-5 flex items-center justify-center cart-icon">5</span>
-            </Link>
-          </div> */}
         </div>
         <div className="md:hidden">
           <button
@@ -172,46 +166,17 @@ const Navbar = () => {
             }`}
           >
             <div className="pt-2 text-2xl text-gray-500">
-              <FaBoxOpen />
+            <FaBoxOpen />
             </div>
-            <button
-              onClick={toggleProducts}
-              className="block text-gray-800 py-2 focus:outline-none flex items-center justify-between w-full"
+            <Link
+              to="/products"
+              className="block text-gray-800 py-2"
+              onClick={closeMenu}
             >
-              Products {isProductsOpen ? <FaChevronUp /> : <FaChevronDown />}
-            </button>
+              Products
+            </Link>
           </div>
-          {isProductsOpen && (
-            <div className="pl-8 text-lg">
-              <Link
-                to="/products/category1"
-                className={`block text-gray-800 py-2 border-b ${
-                  isActive("/products/category1") ? "border-purple-500" : ""
-                }`}
-                onClick={closeMenu}
-              >
-                Category 1
-              </Link>
-              <Link
-                to="/products/category2"
-                className={`block text-gray-800 py-2 border-b ${
-                  isActive("/products/category2") ? "border-purple-500" : ""
-                }`}
-                onClick={closeMenu}
-              >
-                Category 2
-              </Link>
-              <Link
-                to="/products/category3"
-                className={`block text-gray-800 py-2 border-b ${
-                  isActive("/products/category3") ? "border-purple-500" : ""
-                }`}
-                onClick={closeMenu}
-              >
-                Category 3
-              </Link>
-            </div>
-          )}
+
           <div
             className={`flex gap-2 border-b ${
               isActive("/cart") ? "border-purple-500" : ""

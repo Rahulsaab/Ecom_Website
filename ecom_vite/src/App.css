@@ -453,11 +453,15 @@ textarea {
   background-color: #D1C2FF;
   max-width: 100%;
   flex-wrap: wrap;
-  padding: 2rem;
-  
-
-  
+  padding: 2rem; 
 }
+
+/* PRODUCTS */
+
+.p-for-pc{
+  display: none;
+}
+
 
 }
 
@@ -802,6 +806,12 @@ textarea {
   flex-wrap: wrap;
   padding: 2rem;
   
+}
+
+/* PRODUCTS */
+
+.p-for-mobile{
+  display: none;
 }
 
 }

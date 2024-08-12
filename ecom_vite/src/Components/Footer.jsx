@@ -1,5 +1,5 @@
 import React from "react";
-import { Label, TextInput,Button } from "flowbite-react";
+import {  TextInput,Button } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { FaRegCopyright } from "react-icons/fa";
 
