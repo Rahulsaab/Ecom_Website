@@ -262,7 +262,7 @@ body {
 }
 
 /* CONTACT PAGE  */
-/* From Uiverse.io by ClawHack1 */ 
+
 .contact-form {
   background-color: #f2f2f2;
   padding: 30px;
@@ -458,7 +458,7 @@ textarea {
 
 /* PRODUCTS */
 
-.p-for-pc{
+.grid-pc{
   display: none;
 }
 

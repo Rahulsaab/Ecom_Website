@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "flowbite-react";
 import { HiShoppingCart } from "react-icons/hi";
+import { Link } from "react-router-dom";
 const HeroSection = ({mydata}) => {
   const {name} = mydata
   return (
@@ -15,11 +16,11 @@ const HeroSection = ({mydata}) => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Maiores porro beatae cumque veniam dolorem commodi omnis. 
               </div>
-              <div className="pt-2">
+              <div className="pt-2"><Link to='/products'>
                 <Button  color="purple" className="bg-custom-purple">
                   <HiShoppingCart className="mr-2 h-5 w-5"  />
                   Shop now
-                </Button>
+                </Button></Link>
               </div>
             </div>
             <div className="hero-right">
