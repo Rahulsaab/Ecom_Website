@@ -6,7 +6,7 @@ const ListView = ({ products }) => {
   return (
     <>
       <div className="">
-        <div className="m-auto max-w-fit pt-20 p-4 relative group cursor-pointer overflow-hidden duration-500">
+        <div className="m-auto max-w-fit pt-20 p-4 relative cursor-pointer overflow-hidden duration-500">
           {products.map((product) => {
             const { id, name, image, company, description, price, colors } =
               product;
@@ -14,7 +14,7 @@ const ListView = ({ products }) => {
             return (
               <Link to={`/singleproduct/${id}`}>
                 <div
-                  className="flex flex-wrap gap-5 mb-10 shadow-xl text-gray-500 p-7 rounded-md max-w-full group-hover:scale-95 duration-300"
+                  className="flex flex-wrap bg-white gap-5 mb-10 shadow-xl text-gray-500 p-7 rounded-md max-w-full hover:scale-95 duration-300"
                   key={id}
                 >
                   <div className="w-96 h-full ">

@@ -158,7 +158,7 @@ const Products = () => {
         </div>
       </div>
       <section>
-        <div className="p-for-mobile">
+        <div className="p-for-mobile bg-gray-200">
           <div className="m-auto max-w-fit pt-20 p-6">
             {filter_products.map((product) => {
               const { id, name, image, description, price, colors } = product;
@@ -166,7 +166,7 @@ const Products = () => {
               return (
                 <Link to={`/singleproduct/${id}`}>
                 <div
-                  className="flex flex-wrap gap-5 mb-10 shadow-2xl text-gray-600 p-7 rounded-xl max-w-full"
+                  className="flex bg-white flex-wrap gap-5 mb-10 shadow-2xl text-gray-600 p-7 rounded-xl max-w-full"
                   key={id}
                 >
                   <div className="w-96 h-full ">
@@ -222,7 +222,7 @@ const Products = () => {
         
       </section>
       <section>
-        <div className="grid-pc">
+        <div className="grid-pc bg-slate-200">
           {grid_view ? (
             <div className="">
               <GridView cl products={filter_products} />
